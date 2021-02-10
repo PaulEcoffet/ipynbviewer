@@ -15,7 +15,7 @@ Feel free to contribute by creating issues and pull requests.
 ## Installation
 
 ```bash
-pip install ipynbviewer
+pip install ipynbviewer  # does not work yet, ipynb hasn't been submitted to pypi
 ```
 
 ## Usage
