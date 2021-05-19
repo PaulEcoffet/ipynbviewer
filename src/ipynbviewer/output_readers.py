@@ -15,6 +15,17 @@ def stream_output(output: dict):
     """
     return "".join(output["text"])
 
+def display_error_output(output: dict):
+    """
+    Transform a error output into a human readable str
+    :param output: dict containing the error output
+    :return str: a human readable string for the terminal
+    """
+
+    txtoutput = ""
+    txtoutput += f"{output['ename']} : {output['evalue']}\n"
+    txtoutput += "".join(output["traceback"])
+    return txtoutput
 
 def display_data_output(output: dict):
     """
@@ -60,6 +71,7 @@ def output_reader(outputs: list) -> str:
 
 output_readers = {
     "stream": stream_output,
+    "error": display_error_output,
     "display_data": display_data_output,
     "execute_result": display_data_output
 }
