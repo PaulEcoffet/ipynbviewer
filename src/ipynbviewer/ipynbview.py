@@ -1,7 +1,7 @@
 import json
 import argparse
 
-from cell_readers import cell_readers
+from .cell_readers import cell_readers
 
 
 def read_ipynb(ipynb_dict: dict)-> str:

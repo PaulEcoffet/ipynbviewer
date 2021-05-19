@@ -2,7 +2,9 @@
 Module for converting outputs from cells into str
 """
 
-from data_readers import data_readers, IncompatibleDataReaderException
+import pprint
+
+from .data_readers import data_readers, IncompatibleDataReaderException
 
 
 def stream_output(output: dict):
@@ -49,7 +51,10 @@ def output_reader(outputs: list) -> str:
     """
     outstr = []
     for output in outputs:
-        outstr.append(output_readers[output["output_type"]](output))
+        try:
+            outstr.append(output_readers[output["output_type"]](output))
+        except KeyError:
+            outstr.append(pprint.pformat(output))
     return "\n".join(outstr)
 
 

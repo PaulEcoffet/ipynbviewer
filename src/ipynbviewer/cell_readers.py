@@ -2,7 +2,7 @@ import pygments
 from pygments.lexers import PythonLexer, MarkdownLexer
 from pygments.formatters import TerminalFormatter
 
-from output_readers import output_reader
+from .output_readers import output_reader
 
 
 def code_reader(cell: dict) -> str:
