@@ -2,7 +2,7 @@
 
 `ipynbviewer` is a script that outputs Jupyter Notebook in the terminal in a human readable format. It is particularly useful when you want to skim through your notebooks on ssh without having to start a jupyter notebook instance.
 
-It highlights syntax, shows outputs and previews images (in very low resolution). It is heavily customisable, you can easily add a new parser for different sources of code or output.
+It highlights syntax, shows outputs and previews images (in very low resolution). It is customisable, you can easily add a new parser for different sources of code or output.
 
 For now, `ipynbviewer` only supports python, markdown, text output, html outputs and images for ipynb v4.
 
@@ -16,6 +16,13 @@ Feel free to contribute by creating issues and pull requests.
 
 ```bash
 pip install ipynbviewer  # does not work yet, ipynb hasn't been submitted to pypi
+```
+
+Manually:
+
+```bash
+git clone https://github.com/PaulEcoffet/ipynbviewer.git
+pip install ipynbviewer/  # The slash at the end is required
 ```
 
 ## Usage
